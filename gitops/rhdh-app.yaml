@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: rhdh
   namespace: openshift-gitops
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
@@ -12,5 +14,4 @@ spec:
   destination:
     namespace: rhdh
     server: https://kubernetes.default.svc
-  syncPolicy:
-    automated: null
+  syncPolicy: {}
