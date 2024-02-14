@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: default
+  project: rhdh
   source:
     repoURL: https://charts.openshift.io
     targetRevision: 1.0.0-1

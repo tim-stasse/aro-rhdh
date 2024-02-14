@@ -1,0 +1,8 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: rhdh
+  namespace: openshift-gitops
+spec:
+  sourceNamespaces:
+    - rhdh
