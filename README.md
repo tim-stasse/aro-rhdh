@@ -34,3 +34,9 @@ Then `oc apply` the secret:
 ```sh
 oc apply -f secrets/gitops-repository-secret.yaml
 ```
+
+Then `oc apply` the root app:
+
+```sh
+oc apply -f bootstrap/root-app.yaml
+```
