@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rhdh
+spec:
+  project: default
+  source:
+    repoURL: https://charts.openshift.io
+    targetRevision: 1.0.0-1
+    chart: redhat-developer-hub
+  destination:
+    namespace: rhdh
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: null
