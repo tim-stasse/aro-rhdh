@@ -15,7 +15,8 @@ spec:
   project: cluster-config
   source:
     repoURL: ${INFRA_GITOPS_REPO}
-    chart: redhat-developer-hub
+    path: applications/redhat-developer-hub
+    targetRevision: HEAD
   destination:
     namespace: redhat-developer-hub
     server: https://kubernetes.default.svc
