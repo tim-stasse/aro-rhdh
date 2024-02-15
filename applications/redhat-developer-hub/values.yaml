@@ -1,0 +1,2 @@
+global:
+  clusterRouterBase: apps.${CLUSTER_BASE_DOMAIN}
