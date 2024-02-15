@@ -46,5 +46,5 @@ oc apply -f secrets/gitops-repository-secret.yaml
 Then `oc apply` the root app:
 
 ```sh
-envsubst < bootstrap/root-app.yaml | oc apply -f -
+envsubst < bootstrap/root-applications.yaml | oc apply -f -
 ```
