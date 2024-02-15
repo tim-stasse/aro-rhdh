@@ -15,7 +15,6 @@ spec:
   project: cluster-config
   source:
     repoURL: ${INFRA_GITOPS_REPO}
-    targetRevision: HEAD
     chart: redhat-developer-hub
   destination:
     namespace: redhat-developer-hub
