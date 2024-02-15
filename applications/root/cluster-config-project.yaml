@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cluster-config
+  namespace: openshift-gitops
+  annotations:
+    notifications.argoproj.io/subscribe.on-sync-failed.slack: cluster-gitops
+    notifications.argoproj.io/subscribe.on-health-degraded.slack: cluster-gitops
+spec:
+  description: Project for overall cluster configuration
+  sourceRepos:
+    - ${INFRA_GITOPS_REPO}
+    - https://charts.openshift.io
+  destinations:
+    - namespace: '*'
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
