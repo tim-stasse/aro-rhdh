@@ -6,10 +6,11 @@ resources:
   - ./namespace.yaml
   - ./cluster-role-binding.yaml
 
+helmGlobals:
+  chartHome: ../../helm/charts
+
 helmCharts:
-  - repo: https://charts.openshift.io
-    name: redhat-developer-hub
-    version: 1.0.0-1
+  - name: redhat-developer-hub
     releaseName: redhat-developer-hub
     namespace: redhat-developer-hub
     valuesFile: values.yaml

@@ -1,0 +1,12 @@
+apiVersion: v2
+name: red-hat-developer-hub
+type: application
+version: 0.1.0
+description: |
+  Red Hat Developer Hub is an enterprise-grade, open developer platform
+  for building developer portals, containing a supported and opinionated
+  framework.
+dependencies:
+  - name: redhat-developer-hub
+    repository: https://charts.openshift.io
+    version: 1.0.0-1
