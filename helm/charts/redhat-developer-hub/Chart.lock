@@ -1,6 +1,9 @@
 dependencies:
-- name: redhat-developer-hub
-  repository: https://charts.openshift.io
-  version: 1.0.0-1
-digest: sha256:58950946e11888878172ffa43ab6127f9f20d4b5dba87a2c71cf35bbc2928ca5
-generated: "2024-02-16T18:09:40.090524733+11:00"
+- name: common
+  repository: https://charts.bitnami.com/bitnami
+  version: 2.13.3
+- name: backstage
+  repository: https://backstage.github.io/charts
+  version: 1.8.0
+digest: sha256:b9992eb50233f6f9bef89f54ae18818e1e458964c5df8c397898e465cdfc5c94
+generated: "2023-11-24T14:53:45.445514303Z"
