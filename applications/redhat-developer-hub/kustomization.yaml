@@ -4,7 +4,6 @@ namespace: redhat-developer-hub
 
 resources:
   - ./namespace.yaml
-  - ./cluster-role-binding.yaml
 
 helmGlobals:
   chartHome: ../../helm/charts
