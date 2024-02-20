@@ -1,6 +1,0 @@
-dependencies:
-- name: redhat-developer-hub
-  repository: https://charts.openshift.io
-  version: 1.0.0-1
-digest: sha256:b17b039011661d718b628585668ba2e2da665c66cbb59fc12c54b9ac18b74b61
-generated: "2024-02-20T12:27:11.997264472+11:00"

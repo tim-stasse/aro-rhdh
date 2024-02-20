@@ -1,8 +1,0 @@
-apiVersion: v2
-name: developer-hub
-type: application
-version: 0.2.0
-dependencies:
-- name: redhat-developer-hub
-  repository: https://charts.openshift.io
-  version: 1.0.0-1
