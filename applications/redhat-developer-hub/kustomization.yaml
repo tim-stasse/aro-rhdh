@@ -12,4 +12,3 @@ helmCharts:
   - name: developer-hub
     releaseName: redhat-developer-hub
     namespace: redhat-developer-hub
-    valuesFile: values.yaml
