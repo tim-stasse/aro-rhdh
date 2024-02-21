@@ -5,4 +5,4 @@ resources:
   - cluster-config-project.yaml
   - openshift-gitops-configuration.yaml
   - redhat-developer-hub-application.yaml
-  - rhsso-operator.yaml
+  - rhsso.yaml

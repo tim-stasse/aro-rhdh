@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rhsso-operator
+  name: rhsso
   namespace: openshift-gitops
   labels:
     app-source: cluster-hub
@@ -15,7 +15,7 @@ spec:
   project: cluster-config
   source:
     repoURL: ${INFRA_GITOPS_REPO}
-    path: applications/rhsso-operator
+    path: applications/rhsso
     targetRevision: HEAD
   destination:
     namespace: rhsso
