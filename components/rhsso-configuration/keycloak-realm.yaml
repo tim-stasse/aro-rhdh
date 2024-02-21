@@ -1,0 +1,16 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakRealm
+metadata:
+  name: myorg
+  namespace: rhsso
+  labels:
+    app: rhsso
+spec:
+  realm:
+    id: myorg
+    realm: myorg
+    enabled: true
+    displayName: myorg realm
+  instanceSelector:
+    matchLabels:
+      app: rhsso
