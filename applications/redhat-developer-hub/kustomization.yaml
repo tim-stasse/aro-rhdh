@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
   - ./namespace.yaml
+  - ./keycloak-client-secret-backstage.yaml
   - ./cluster-role-binding.yaml
   - ./console-link.yaml

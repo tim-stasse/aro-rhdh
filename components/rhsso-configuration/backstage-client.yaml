@@ -1,0 +1,32 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: backstage
+  namespace: rhsso
+  labels:
+    app: rhsso
+spec:
+  realmSelector:
+    matchLabels:
+      app: rhsso
+  client:
+    id: backstage
+    clientId: backstage
+    secret: ocp-secret
+    rootUrl: https://redhat-developer-hub-redhat-developer-hub.apps.${CLUSTER_BASE_DOMAIN}
+    redirectUris:
+      - /oauth2/callback
+    clientAuthenticatorType: client-secret
+    standardFlowEnabled: true
+    directAccessGrantsEnabled: true
+    implicitFlowEnabled: false
+    defaultClientScopes:
+      - profile
+      - email
+    consentRequired: false
+    serviceAccountsEnabled: true
+  serviceAccountClientRoles:
+    realm-management:
+      - query-groups
+      - query-users
+      - view-users
