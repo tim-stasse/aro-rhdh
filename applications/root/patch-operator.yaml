@@ -1,0 +1,48 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: patch-operator
+  namespace: openshift-gitops
+  labels:
+    app-source: cluster-hub
+    repo: cluster-config
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
+    argocd.argoproj.io/sync-wave: '25'
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: cluster-config
+  source:
+    repoURL: ${INFRA_GITOPS_REPO}
+    path: applications/patch-operator
+    targetRevision: HEAD
+  destination:
+    namespace: patch-operator
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      selfHeal: true
+    retry:
+      limit: -1
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 10m
+    syncOptions:
+      - ApplyOutOfSyncOnly=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+      - ServerSideApply=true  
+      - FailOnSharedResource=true
+      - RespectIgnoreDifferences=true
+      - CreateNamespace=false
+  ignoreDifferences:
+    - group: 'apps'
+      jsonPointers:
+        - /spec/volumeClaimTemplates
+      kind: StatefulSet
+    - group: 'route.openshift.io'
+      jsonPointers:
+        - /spec/host
+      kind: Route    

@@ -6,3 +6,4 @@ resources:
   - openshift-gitops-configuration.yaml
   - redhat-developer-hub-application.yaml
   - rhsso.yaml
+  - patch-operator.yaml
