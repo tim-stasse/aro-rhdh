@@ -6,3 +6,4 @@ resources:
   - ./keycloak-client-secret-backstage.yaml
   - ./cluster-role-binding.yaml
   - ./console-link.yaml
+  - ./client-secret-patch.yaml
