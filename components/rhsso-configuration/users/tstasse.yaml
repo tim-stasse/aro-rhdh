@@ -16,8 +16,6 @@ spec:
     email: tstasse@redhat.com
     enabled: true
     emailVerified: true
-    groups:
-      - admin
     credentials:
       - temporary: false
         type: password

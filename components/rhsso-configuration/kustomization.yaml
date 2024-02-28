@@ -6,6 +6,4 @@ resources:
   - keycloak-realm.yaml
   - console-link.yaml
   - clients/backstage.yaml
-  - groups/admin/group.yaml
-  - groups/admin/cluster-role-binding.yaml
   - users/tstasse.yaml
