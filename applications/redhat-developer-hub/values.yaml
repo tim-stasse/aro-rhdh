@@ -61,7 +61,7 @@ upstream:
         providers:
           keycloakOrg:
             default:
-              baseUrl: https://keycloak-sso.apps.${CLUSTER_BASE_DOMAIN}/auth
+              baseUrl: https://keycloak-rhsso.apps.${CLUSTER_BASE_DOMAIN}/auth
               loginRealm: master
               realm: myorg
               clientId: 'backstage'
