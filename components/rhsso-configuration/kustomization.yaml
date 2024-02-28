@@ -5,4 +5,4 @@ resources:
   - keycloak.yaml
   - keycloak-realm.yaml
   - console-link.yaml
-  - backstage-client.yaml
+  - clients/backstage.yaml
