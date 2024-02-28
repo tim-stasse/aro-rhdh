@@ -6,3 +6,5 @@ resources:
   - keycloak-realm.yaml
   - console-link.yaml
   - clients/backstage.yaml
+  - groups/admin/group.yaml
+  - groups/admin/clster-role-binding.yaml
