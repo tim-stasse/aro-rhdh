@@ -1,0 +1,24 @@
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakUser
+metadata:
+  name: tstasse
+  labels:
+    app: rhsso
+  namespace: rhsso
+spec:
+  realmSelector:
+    matchLabels:
+      app: rhsso
+  user:
+    username: tstasse
+    firstName: Tim
+    lastName: Stasse
+    email: tstasse@redhat.com
+    enabled: true
+    emailVerified: true
+    groups:
+      - admin
+    credentials:
+      - temporary: false
+        type: password
+        value: tstasse

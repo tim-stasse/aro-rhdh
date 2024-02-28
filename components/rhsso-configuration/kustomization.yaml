@@ -7,4 +7,5 @@ resources:
   - console-link.yaml
   - clients/backstage.yaml
   - groups/admin/group.yaml
-  - groups/admin/clster-role-binding.yaml
+  - groups/admin/cluster-role-binding.yaml
+  - users/tstasse.yaml
