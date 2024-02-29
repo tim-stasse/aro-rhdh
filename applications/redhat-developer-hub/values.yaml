@@ -61,7 +61,6 @@ upstream:
               loginRealm: master
               realm: myorg
               clientId: 'backstage'
-              clientSecret: '${KEYCLOAK_CLIENT_SECRET}'
               schedule:
                 frequency: { minutes: 1 }
                 timeout: { minutes: 1 }
@@ -75,7 +74,7 @@ upstream:
         value: "0"
       - name: LOG_LEVEL
         value: debug
-      - name: KEYCLOAK_CLIENT_SECRET
+      - name: APP_CONFIG_catalog_providers_keycloakOrg_default_clientSecret
         valueFrom:
           secretKeyRef:
             name: keycloak-client-secret-backstage
