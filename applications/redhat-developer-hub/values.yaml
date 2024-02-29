@@ -34,9 +34,10 @@ upstream:
       app:
         baseUrl: 'https://{{- include "janus-idp.hostname" . }}'
       auth:
-        environment: production
+        environment: development
         providers:
-          oauth2Proxy: {}
+          oauth2Proxy:
+            development: {}
       backend:
         auth:
           keys:
