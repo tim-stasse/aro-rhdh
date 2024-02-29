@@ -50,14 +50,7 @@ upstream:
             user: postgres
       enabled:
         keycloak: true
-      integrations:
-        github:
-          - host: github.com
-            token: ${GITHUB_TOKEN}
       catalog:
-        locations:
-        - target: https://github.com/environment-aas/platform-iac/tree/main/.backstage-templates/namespace/template.yaml
-          type: url
         providers:
           keycloakOrg:
             default:
@@ -92,11 +85,6 @@ upstream:
           secretKeyRef:
             key: postgres-password
             name: '{{- include "janus-idp.postgresql.secretName" . }}'
-      - name: GITHUB_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: github-token
-            key: token
     extraContainers:
       - name: oauth2-proxy
         env:
