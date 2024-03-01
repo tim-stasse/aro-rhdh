@@ -23,6 +23,7 @@ spec:
     defaultClientScopes:
       - profile
       - email
+      - roles
     consentRequired: false
     serviceAccountsEnabled: true
   serviceAccountRealmRoles:
