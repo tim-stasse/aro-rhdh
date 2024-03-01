@@ -25,6 +25,8 @@ spec:
       - email
     consentRequired: false
     serviceAccountsEnabled: true
+  serviceAccountRealmRoles:
+    - default-roles-myorg
   serviceAccountClientRoles:
     realm-management:
       - query-groups
