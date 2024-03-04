@@ -40,6 +40,7 @@ upstream:
         providers:
           oauth2Proxy:
             development: {}
+      signInPage: oauth2Proxy
       backend:
         auth:
           keys:
