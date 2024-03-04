@@ -42,7 +42,12 @@ spec:
       jsonPointers:
         - /spec/volumeClaimTemplates
       kind: StatefulSet
+    - group: 'apps'
+      jqPathExpressions:
+        - .spec.template.spec.containers[].env[].valueFrom.resourceFieldRef.divisor
+        - .spec.template.spec.initContainers[].env[].valueFrom.resourceFieldRef.divisor
+      kind: Deployment
     - group: 'route.openshift.io'
       jsonPointers:
         - /spec/host
-      kind: Route    
+      kind: Route
