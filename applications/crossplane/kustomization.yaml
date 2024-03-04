@@ -3,3 +3,4 @@ kind: Kustomization
 
 components:
   - ../../components/crossplane-operator/
+  - ../../components/crossplane-providers/
