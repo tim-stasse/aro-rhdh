@@ -6,4 +6,5 @@ resources:
   - keycloak-realm.yaml
   - console-link.yaml
   - clients/backstage.yaml
+  - groups/admin.yaml
   - users/tstasse.yaml
