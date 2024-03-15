@@ -48,3 +48,5 @@ Then `oc apply` the root app:
 ```sh
 envsubst < bootstrap/root-applications.yaml | oc apply -f -
 ```
+
+Here is me making some changes for a Pull Request (PR)
